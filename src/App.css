@@ -11503,6 +11503,7 @@ body {
   font-family: 'Fira Mono', monospace;
   font-size: 1.5rem;
   color: #e5e5e5;
+  overscroll-behavior-y: none;
 }
 
 h1,
@@ -11770,6 +11771,15 @@ p {
   height: -moz-fit-content;
   height: fit-content;
   position: relative;
+  overflow: hidden;
+}
+
+.app {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   overflow: hidden;
 }
 /*# sourceMappingURL=App.css.map */

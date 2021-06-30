@@ -17,6 +17,7 @@ body {
   font-family: 'Fira Mono', monospace;
   font-size: 1.5rem;
   color: $white;
+  overscroll-behavior-y: none;
 }
 h1,
 .h1,
@@ -242,6 +243,16 @@ p {
   width: 100%;
   height: fit-content;
   position: relative;
+  overflow: hidden;
+}
+
+//skew scroll
+.app {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   overflow: hidden;
 }
 
