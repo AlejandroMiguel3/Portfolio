@@ -1,10 +1,10 @@
 import './App.css'
-import Loading from './components/loading'
+import Landing from './components/landing'
 
 function App() {
   return (
     <>
-      <Loading></Loading>
+      <Landing></Landing>
     </>
   )
 }

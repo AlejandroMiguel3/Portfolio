@@ -16,10 +16,23 @@ body {
   font-family: 'Fira Mono', monospace;
   color: $white;
 }
-
-// for loading page
-.loading-content {
-  line-height: 1.8rem;
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  line-height: inherit;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 0rem;
 }
 .color {
   &__violet {
@@ -43,7 +56,64 @@ body {
   &__grey {
     color: $grey;
   }
+  &__white {
+    color: $white;
+  }
+}
+
+//additional helpers
+.g-5 {
+  gap: 8rem;
+}
+
+// for loading page
+.loading-content {
+  line-height: 1.8rem;
+}
+.wrapper {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper .line {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  overflow: hidden;
+}
+.line-loading {
+  width: 100%;
+  position: relative;
 }
 .break-word {
   overflow-wrap: break-word;
 }
+
+//navigation
+.navbar {
+  padding-top: 48px;
+}
+.navbar-collapse {
+  flex-grow: 0;
+}
+.nav-link {
+  color: $white;
+}
+
+//headline
+.headline-content {
+  height: calc(100vh - 97px);
+  display: flex;
+  align-items: center;
+}
+.wrapper .headline {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  overflow: hidden;
+}
+
+//transistion

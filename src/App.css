@@ -11504,8 +11504,24 @@ body {
   color: #e5e5e5;
 }
 
-.loading-content {
-  line-height: 1.8rem;
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  line-height: inherit;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0rem;
 }
 
 .color__violet {
@@ -11536,7 +11552,83 @@ body {
   color: #656b75;
 }
 
+.color__white {
+  color: #e5e5e5;
+}
+
+.g-5 {
+  gap: 8rem;
+}
+
+.loading-content {
+  line-height: 1.8rem;
+}
+
+.wrapper {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .line {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+  overflow: hidden;
+}
+
+.line-loading {
+  width: 100%;
+  position: relative;
+}
+
 .break-word {
   overflow-wrap: break-word;
+}
+
+.navbar {
+  padding-top: 48px;
+}
+
+.navbar-collapse {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+.nav-link {
+  color: #e5e5e5;
+}
+
+.headline-content {
+  height: calc(100vh - 97px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .headline {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+  overflow: hidden;
 }
 /*# sourceMappingURL=App.css.map */
