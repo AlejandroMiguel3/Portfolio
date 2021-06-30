@@ -1,12 +1,20 @@
 import Navbar from './nav'
 import Headline from './headline'
-import { gsap, Power3 } from 'gsap'
+import About from './about'
+import Works from './works'
+import React, { useRef } from 'react'
 
 function Home() {
   return (
     <>
-      <Navbar></Navbar>
-      <Headline></Headline>
+      <div className='app'>
+        <div className='scroll'>
+          <Navbar></Navbar>
+          <Headline></Headline>
+          <About></About>
+          <Works></Works>
+        </div>
+      </div>
     </>
   )
 }

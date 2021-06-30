@@ -30,7 +30,7 @@ function Loading() {
           amount: 0.4,
         },
       })
-    }, 7000)
+    }, 6800)
   })
 
   return (
