@@ -1,0 +1,49 @@
+@import '../node_modules/bootstrap/scss/custom_bootstrap';
+
+$blue: #3a92ef;
+$orange: #c76d43;
+$green: #6bb070;
+$red: #ec5252;
+$yellow: #d1a926;
+$violet: #995ab8;
+$white: #e5e5e5;
+$black: #21252b;
+$black-shade1: #2c313c;
+$grey: #656b75;
+
+body {
+  background-color: $black;
+  font-family: 'Fira Mono', monospace;
+  color: $white;
+}
+
+// for loading page
+.loading-content {
+  line-height: 1.8rem;
+}
+.color {
+  &__violet {
+    color: $violet;
+  }
+  &__yellow {
+    color: $yellow;
+  }
+  &__blue {
+    color: $blue;
+  }
+  &__green {
+    color: $green;
+  }
+  &__red {
+    color: $red;
+  }
+  &__orange {
+    color: $orange;
+  }
+  &__grey {
+    color: $grey;
+  }
+}
+.break-word {
+  overflow-wrap: break-word;
+}
