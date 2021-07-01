@@ -11595,8 +11595,6 @@ a:hover {
     font-size: 1rem;
   }
   .container-about {
-    min-height: 1240px;
-    height: 100%;
     position: relative;
   }
   .order-left {
@@ -11620,6 +11618,9 @@ a:hover {
   .container-media {
     margin: 4rem auto;
   }
+  .container-about {
+    padding-bottom: 4rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -11639,10 +11640,6 @@ a:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  .container-about {
-    min-height: 1080px;
-    height: 100%;
   }
   .order-left {
     -webkit-box-ordinal-group: 1;
@@ -11664,6 +11661,9 @@ a:hover {
   }
   .container-media {
     margin: 4rem auto;
+  }
+  .container-about {
+    padding-bottom: 8rem;
   }
 }
 
@@ -11689,10 +11689,6 @@ a:hover {
   p,
   .navbar-brand {
     font-size: 1.5rem;
-  }
-  .container-about {
-    min-height: 100vh;
-    height: 100%;
   }
 }
 
@@ -11746,22 +11742,6 @@ a:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-}
-
-@media screen and (max-height: 695px) and (min-height: 695px) {
-  .container-about {
-    max-height: 280px;
-    min-height: 1100px;
-    height: 100%;
-  }
-}
-
-@media screen and (max-height: 653px) and (min-height: 653px) {
-  .container-about {
-    max-height: 280px;
-    min-height: 1320px;
-    height: 100%;
   }
 }
 
@@ -11834,6 +11814,11 @@ a:hover {
   height: 100%;
   width: 100%;
   overflow: hidden;
+}
+
+.app .scroll {
+  padding: 2vh 0;
+  pointer-events: none;
 }
 
 .container-media {
