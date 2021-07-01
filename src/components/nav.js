@@ -2,9 +2,7 @@ function Navbar() {
   return (
     <nav className='navbar navbar-expand-lg'>
       <div className='container d-flex justify-content-between'>
-        <a className='navbar-brand color__yellow' href='#'>
-          dThird
-        </a>
+        <a className='navbar-brand color__yellow'>dThird</a>
         <button
           className='navbar-toggler'
           type='button'
@@ -19,19 +17,15 @@ function Navbar() {
         <div className='collapse navbar-collapse' id='navbarNav'>
           <ul className='navbar-nav g-5'>
             <li className='nav-item'>
-              <a className='nav-link active' aria-current='page' href='#'>
+              <a className='nav-link active' aria-current='page'>
                 .skills
               </a>
             </li>
             <li className='nav-item'>
-              <a className='nav-link' href='#'>
-                .works
-              </a>
+              <a className='nav-link'>.works</a>
             </li>
             <li className='nav-item'>
-              <a className='nav-link' href='#'>
-                .contact
-              </a>
+              <a className='nav-link'>.contact</a>
             </li>
           </ul>
         </div>

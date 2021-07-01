@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react'
-
 function About() {
   return (
     <section className='container container-about'>
@@ -39,7 +37,7 @@ function About() {
             <span className='color__orange'>&#60;&#62;</span> html
           </h1>
           <h1>
-            <span className='color__blue'>&nbsp;#</span> css
+            <span className='color__blue'>&nbsp;&#35;</span> css
           </h1>
           <h1>
             <span className='color__yellow'>JS</span> gsap
@@ -58,8 +56,8 @@ function About() {
       <div className='row'>
         <h1 className='color__yellow col-md-1 offset-md-0'> &#125;</h1>
         <div className='col col-md-11 offset-md-0'>
-          <p className='color__grey'>// do what you love</p>
-          <p className='color__grey'>// love what you do</p>
+          <p className='color__grey'>&#47;&#47; do what you love</p>
+          <p className='color__grey'>&#47;&#47; love what you do</p>
         </div>
       </div>
     </section>

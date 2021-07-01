@@ -61,8 +61,8 @@ function Loading() {
           </p>
         </div>
 
-        <span className='line'>
-          <p className='line-loading color__grey px-3'>
+        <div className='line'>
+          <div className='line-loading color__grey px-3'>
             <Typewriter
               options={{
                 pauseFor: 2000,
@@ -81,8 +81,8 @@ function Loading() {
                   .start()
               }}
             />
-          </p>
-        </span>
+          </div>
+        </div>
 
         <div className='line'>
           <p className='line-paragraph'>
