@@ -90,6 +90,13 @@ p {
     min-height: 1240px;
     height: 100%;
   }
+  .order-left {
+    order: 1;
+  }
+  .tumbnail-size {
+    width: 100%;
+    height: 40vw;
+  }
 }
 
 @media (min-width: 768px) {
@@ -108,6 +115,13 @@ p {
   }
   .container-about {
     min-height: 1080px;
+    height: 100%;
+  }
+  .order-left {
+    order: 0;
+  }
+  .tumbnail-size {
+    width: 100%;
     height: 100%;
   }
 }
@@ -257,3 +271,28 @@ p {
 }
 
 //transistion
+
+//works
+.project-container {
+  position: relative;
+}
+.klase-tumbnail {
+  background-image: url(./assets/klase_tumbnail.png);
+  background-position: top 0% left 50%;
+  background-size: 100%;
+}
+.works-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+.encryptee-tumbnail {
+  background-image: url(./assets/encryptee_tumbnail.png);
+  background-position: top 0% left 50%;
+  background-size: 100%;
+}
+.anydo-tumbnail {
+  background-image: url(./assets/anydo_tumbnail.png);
+  background-position: top 0% left 50%;
+  background-size: 100%;
+}
