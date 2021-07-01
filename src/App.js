@@ -4,7 +4,9 @@ import Landing from './components/landing'
 function App() {
   return (
     <>
-      <Landing></Landing>
+      <main>
+        <Landing></Landing>
+      </main>
     </>
   )
 }

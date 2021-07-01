@@ -11526,6 +11526,16 @@ p {
   margin-bottom: 0rem;
 }
 
+a,
+a:hover {
+  color: #d1a926;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #c76d43;
+}
+
 .color__violet {
   color: #995ab8;
 }
@@ -11587,6 +11597,7 @@ p {
   .container-about {
     min-height: 1240px;
     height: 100%;
+    position: relative;
   }
   .order-left {
     -webkit-box-ordinal-group: 2;
@@ -11652,7 +11663,7 @@ p {
     padding-bottom: 8rem;
   }
   .container-media {
-    margin: 8rem auto;
+    margin: 4rem auto;
   }
 }
 
@@ -11825,7 +11836,15 @@ p {
   overflow: hidden;
 }
 
+.container-media {
+  position: relative;
+}
+
 .project-container {
+  position: relative;
+}
+
+.container-works {
   position: relative;
 }
 
@@ -11833,6 +11852,9 @@ p {
   background-image: url(./assets/klase_tumbnail.png);
   background-position: top 0% left 50%;
   background-size: 100%;
+  background-repeat: no-repeat;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 .works-container {
@@ -11850,12 +11872,16 @@ p {
   background-image: url(./assets/encryptee_tumbnail.png);
   background-position: top 0% left 50%;
   background-size: 100%;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 .anydo-tumbnail {
   background-image: url(./assets/anydo_tumbnail.png);
   background-position: top 0% left 50%;
   background-size: 100%;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 a {
@@ -11882,12 +11908,18 @@ a {
 .menu__item {
   cursor: default;
   position: relative;
-  padding: 0 5vw;
+}
+
+.contact-hover {
+  z-index: -9999;
+}
+
+.container-contact {
+  position: relative;
 }
 
 /* Make sure 3 items are visible in the viewport by setting suitable font size. */
 .marquee {
-  position: absolute;
   top: 0;
   left: 0;
   width: var(--marquee-width);
@@ -11910,14 +11942,19 @@ a {
           animation: marquee 5s linear infinite;
   -webkit-animation-play-state: running;
           animation-play-state: running;
-  opacity: 1;
-  -webkit-transition: opacity 0.1s;
-  transition: opacity 0.1s;
-  -webkit-text-stroke: 1.5px #656b75;
-  text-stroke: 1.5px #656b75;
+  -webkit-text-stroke: 0.2px #656b75;
+  text-stroke: 0.5px #656b75;
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
   color: transparent;
+}
+
+.menu:hover .marquee__inner {
+  -webkit-transition: opacity 0.1s;
+  transition: opacity 0.1s;
+  -webkit-text-fill-color: #656b75;
+  text-fill-color: #656b75;
+  color: #656b75;
 }
 
 .marquee span {
@@ -11955,6 +11992,107 @@ a {
   100% {
     -webkit-transform: translate3d(var(--move-final), 0, 0);
             transform: translate3d(var(--move-final), 0, 0);
+  }
+}
+
+main::before {
+  -webkit-animation: grain 8s steps(10) infinite;
+          animation: grain 8s steps(10) infinite;
+  background-image: url(../src/assets/noise_white.png);
+  content: '';
+  height: 300%;
+  left: -50%;
+  opacity: 0.6;
+  position: fixed;
+  top: -100%;
+  width: 300%;
+}
+
+@-webkit-keyframes grain {
+  0%,
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  10% {
+    -webkit-transform: translate(-5%, -10%);
+            transform: translate(-5%, -10%);
+  }
+  20% {
+    -webkit-transform: translate(-15%, 5%);
+            transform: translate(-15%, 5%);
+  }
+  30% {
+    -webkit-transform: translate(7%, -25%);
+            transform: translate(7%, -25%);
+  }
+  40% {
+    -webkit-transform: translate(-5%, 25%);
+            transform: translate(-5%, 25%);
+  }
+  50% {
+    -webkit-transform: translate(-15%, 10%);
+            transform: translate(-15%, 10%);
+  }
+  60% {
+    -webkit-transform: translate(15%, 0%);
+            transform: translate(15%, 0%);
+  }
+  70% {
+    -webkit-transform: translate(0%, 15%);
+            transform: translate(0%, 15%);
+  }
+  80% {
+    -webkit-transform: translate(3%, 35%);
+            transform: translate(3%, 35%);
+  }
+  90% {
+    -webkit-transform: translate(-10%, 10%);
+            transform: translate(-10%, 10%);
+  }
+}
+
+@keyframes grain {
+  0%,
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  10% {
+    -webkit-transform: translate(-5%, -10%);
+            transform: translate(-5%, -10%);
+  }
+  20% {
+    -webkit-transform: translate(-15%, 5%);
+            transform: translate(-15%, 5%);
+  }
+  30% {
+    -webkit-transform: translate(7%, -25%);
+            transform: translate(7%, -25%);
+  }
+  40% {
+    -webkit-transform: translate(-5%, 25%);
+            transform: translate(-5%, 25%);
+  }
+  50% {
+    -webkit-transform: translate(-15%, 10%);
+            transform: translate(-15%, 10%);
+  }
+  60% {
+    -webkit-transform: translate(15%, 0%);
+            transform: translate(15%, 0%);
+  }
+  70% {
+    -webkit-transform: translate(0%, 15%);
+            transform: translate(0%, 15%);
+  }
+  80% {
+    -webkit-transform: translate(3%, 35%);
+            transform: translate(3%, 35%);
+  }
+  90% {
+    -webkit-transform: translate(-10%, 10%);
+            transform: translate(-10%, 10%);
   }
 }
 /*# sourceMappingURL=App.css.map */

@@ -37,6 +37,14 @@ p {
   margin-top: 0;
   margin-bottom: 0rem;
 }
+a,
+a:hover {
+  color: $yellow;
+}
+.nav-link:hover,
+.nav-link:focus {
+  color: $orange;
+}
 .color {
   &__violet {
     color: $violet;
@@ -89,6 +97,7 @@ p {
   .container-about {
     min-height: 1240px;
     height: 100%;
+    position: relative;
   }
   .order-left {
     order: 1;
@@ -147,7 +156,7 @@ p {
     padding-bottom: 8rem;
   }
   .container-media {
-    margin: 8rem auto;
+    margin: 4rem auto;
   }
 }
 
@@ -297,14 +306,24 @@ p {
 
 //transistion
 
+//media
+.container-media {
+  position: relative;
+}
+
 //works
 .project-container {
+  position: relative;
+}
+.container-works {
   position: relative;
 }
 .klase-tumbnail {
   background-image: url(./assets/klase_tumbnail.png);
   background-position: top 0% left 50%;
   background-size: 100%;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
 }
 .works-container {
   display: flex;
@@ -315,11 +334,13 @@ p {
   background-image: url(./assets/encryptee_tumbnail.png);
   background-position: top 0% left 50%;
   background-size: 100%;
+  filter: grayscale(100%);
 }
 .anydo-tumbnail {
   background-image: url(./assets/anydo_tumbnail.png);
   background-position: top 0% left 50%;
   background-size: 100%;
+  filter: grayscale(100%);
 }
 
 //contact
@@ -346,13 +367,17 @@ a {
 .menu__item {
   cursor: default;
   position: relative;
-  padding: 0 5vw;
+}
+.contact-hover {
+  z-index: -9999;
+}
+.container-contact {
+  position: relative;
 }
 
 /* Make sure 3 items are visible in the viewport by setting suitable font size. */
 
 .marquee {
-  position: absolute;
   top: 0;
   left: 0;
   width: var(--marquee-width);
@@ -368,13 +393,19 @@ a {
   transform: translate3d(var(--move-initial), 0, 0);
   animation: marquee 5s linear infinite;
   animation-play-state: running;
-  opacity: 1;
-  transition: opacity 0.1s;
-  -webkit-text-stroke: 1.5px $grey;
-  text-stroke: 1.5px $grey;
+  -webkit-text-stroke: 0.2px $grey;
+  text-stroke: 0.5px $grey;
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
   color: transparent;
+}
+.menu:hover {
+  .marquee__inner {
+    transition: opacity 0.1s;
+    -webkit-text-fill-color: $grey;
+    text-fill-color: $grey;
+    color: $grey;
+  }
 }
 
 .marquee span {
@@ -400,5 +431,52 @@ a {
 
   100% {
     transform: translate3d(var(--move-final), 0, 0);
+  }
+}
+
+//grainy texture
+main::before {
+  animation: grain 8s steps(10) infinite;
+  background-image: url(../src/assets/noise_white.png);
+  content: '';
+  height: 300%;
+  left: -50%;
+  opacity: 0.6;
+  position: fixed;
+  top: -100%;
+  width: 300%;
+}
+
+@keyframes grain {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, 5%);
+  }
+  30% {
+    transform: translate(7%, -25%);
+  }
+  40% {
+    transform: translate(-5%, 25%);
+  }
+  50% {
+    transform: translate(-15%, 10%);
+  }
+  60% {
+    transform: translate(15%, 0%);
+  }
+  70% {
+    transform: translate(0%, 15%);
+  }
+  80% {
+    transform: translate(3%, 35%);
+  }
+  90% {
+    transform: translate(-10%, 10%);
   }
 }
