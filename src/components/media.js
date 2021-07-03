@@ -3,6 +3,12 @@ function Media() {
   return (
     <>
       <footer className='container container-media'>
+        <span style={{ cursor: 'pointer' }}>
+          <Link to='home' spy={true}>
+            <span className='color__blue'>gotoTop</span>
+            <span className='color__yellow'>()</span>
+          </Link>
+        </span>
         <div className='d-flex justify-content-start gap-5 flex-wrap contact-container'>
           <span className='behance'>
             <span className='tag'>&#47;&#42;</span>
@@ -24,12 +30,6 @@ function Media() {
               linkedin{' '}
             </a>
             <span className='tag'>&#42;&#47;</span>
-          </span>
-          <span style={{ cursor: 'pointer' }}>
-            <Link to='home' spy={true}>
-              <span className='color__blue'>gotoTop</span>
-              <span className='color__yellow'>()</span>
-            </Link>
           </span>
           <br></br>
         </div>
