@@ -34,11 +34,11 @@ function Loading() {
   })
 
   return (
-    <div
+    <section
       className='container d-flex align-items-center'
       style={{ height: '100vh' }}
     >
-      <span className='loading-content break-word wrapper'>
+      <div className='loading-content break-word wrapper'>
         <div className='line'>
           <p className='line-paragraph'>
             <span className='color__violet'>const </span>
@@ -61,8 +61,8 @@ function Loading() {
           </p>
         </div>
 
-        <div className='line'>
-          <div className='line-loading color__grey px-3'>
+        <article className='line'>
+          <p className='line-loading color__grey px-3'>
             <Typewriter
               options={{
                 pauseFor: 2000,
@@ -82,16 +82,16 @@ function Loading() {
                   .start()
               }}
             />
-          </div>
-        </div>
+          </p>
+        </article>
 
         <div className='line'>
           <p className='line-paragraph'>
             <span className='color__yellow'>&#125; </span>
           </p>
         </div>
-      </span>
-    </div>
+      </div>
+    </section>
   )
 }
 export default Loading

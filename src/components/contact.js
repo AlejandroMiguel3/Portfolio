@@ -22,7 +22,7 @@ function Contact() {
   }, [])
   return (
     <>
-      <section className='container container-contact'>
+      <section className='container container-contact' id='contact'>
         <h1>
           <span className='color__orange'>.contact</span>
           <span className='color__yellow'> &#123;</span>
@@ -53,9 +53,9 @@ function Contact() {
       </section>
       <a
         href="mailto:migueljr.alejandro190@gmail.com?subject=Let's&nbsp;Talk"
-        class='marquee'
+        className='marquee'
       >
-        <div class='marquee__inner'>
+        <div className='marquee__inner'>
           <span>let's talk</span>
           <span>let's talk</span>
           <span>let's talk</span>

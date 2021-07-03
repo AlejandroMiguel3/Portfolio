@@ -25,7 +25,7 @@ function About() {
   }, [])
 
   return (
-    <section className='container container-about'>
+    <section className='container container-about' id='about'>
       <h1>
         <span className='color__orange'>.about</span>
         <span className='color__yellow'> &#123;</span>
@@ -99,7 +99,7 @@ function About() {
       <div className='row'>
         <h1 className='color__yellow col-md-1 offset-md-0'> &#125;</h1>
         <div className='col col-md-11 offset-md-0'>
-          <p className='color__grey'>
+          <span className='color__grey'>
             <Typewriter
               options={{
                 pauseFor: 2000,
@@ -113,7 +113,7 @@ function About() {
                   .start()
               }}
             />
-          </p>
+          </span>
         </div>
       </div>
     </section>

@@ -5,7 +5,6 @@ import Home from './home'
 
 function Landing() {
   const [loading, setLoading] = useState(false)
-  const [windowHeight, setWindowHeight] = useState(0)
   const size = windowSize()
 
   const app = useRef()

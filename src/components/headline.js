@@ -18,24 +18,26 @@ function Headline() {
   })
 
   return (
-    <div className='container headline-content wrapper'>
-      <div className='headline'>
-        <h1 className='headline-paragraph'>
-          <span>Hi! I am </span>
-          <span className='color__red'>Miguel. </span>
-        </h1>
+    <section>
+      <div className='container headline-content wrapper'>
+        <div className='headline'>
+          <h1 className='headline-paragraph'>
+            <span>Hi! I am </span>
+            <span className='color__red'>Miguel. </span>
+          </h1>
+        </div>
+        <div className='headline'>
+          <h1 className='headline-paragraph'>
+            <span>I build interactive websites that run </span>
+          </h1>
+        </div>
+        <div className='headline'>
+          <h1 className='headline-paragraph'>
+            <span>across platforms & Devices.</span>
+          </h1>
+        </div>
       </div>
-      <div className='headline'>
-        <h1 className='headline-paragraph'>
-          <span>I build interactive websites that run </span>
-        </h1>
-      </div>
-      <div className='headline'>
-        <h1 className='headline-paragraph'>
-          <span>across platforms & Devices.</span>
-        </h1>
-      </div>
-    </div>
+    </section>
   )
 }
 

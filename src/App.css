@@ -11526,9 +11526,12 @@ p {
   margin-bottom: 0rem;
 }
 
-a,
-a:hover {
-  color: #d1a926;
+a {
+  text-decoration: none;
+  color: #656b75;
+  outline: none;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
 }
 
 .nav-link:hover,
@@ -11611,7 +11614,7 @@ a:hover {
     height: 40vw;
   }
   .tumbnail-top {
-    margin: 5rem 0 3rem;
+    margin: 2rem 0 1.5rem;
   }
   .tumbnail-bottom {
     margin: 3rem 0 0;
@@ -11627,6 +11630,24 @@ a:hover {
   }
   .klase-top {
     padding-top: 0rem;
+  }
+  .navbar-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    grid-gap: 2rem;
+    gap: 2rem;
+    font-size: 1rem;
+  }
+  .mobile-top {
+    margin-top: 2rem;
   }
 }
 
@@ -11675,6 +11696,9 @@ a:hover {
   .klase-top {
     padding-top: 4rem;
   }
+  .mobile-top {
+    margin-top: 0;
+  }
 }
 
 @media (min-width: 992px) {
@@ -11698,6 +11722,21 @@ a:hover {
   }
   p,
   .navbar-brand {
+    font-size: 1.5rem;
+  }
+  .navbar-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    grid-gap: 8rem;
+    gap: 8rem;
     font-size: 1.5rem;
   }
 }
@@ -11764,7 +11803,9 @@ a:hover {
 }
 
 .wrapper {
-  width: 100vw;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11847,6 +11888,32 @@ a:hover {
   position: relative;
 }
 
+.behance:hover a {
+  color: #3a92ef;
+}
+
+.behance:hover .tag {
+  opacity: 0.5;
+}
+
+.behance:hover .linked a {
+  opacity: 0.5;
+}
+
+.tag {
+  color: #656b75;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+.linked:hover a {
+  color: #3a92ef;
+}
+
+.linked:hover .tag {
+  opacity: 0.5;
+}
+
 .project-container {
   position: relative;
 }
@@ -11889,12 +11956,6 @@ a:hover {
   background-size: 100%;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
-}
-
-a {
-  text-decoration: none;
-  color: #e5e5e5;
-  outline: none;
 }
 
 .container-contact {

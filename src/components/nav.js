@@ -1,5 +1,6 @@
 import { gsap, Power3 } from 'gsap'
 import React, { useEffect } from 'react'
+import { Link } from 'react-scroll'
 
 function Navbar() {
   const headline = gsap.timeline()
@@ -16,32 +17,25 @@ function Navbar() {
     })
   }, [])
   return (
-    <nav className='navbar navbar-expand-lg'>
+    <nav className='navbar navbar-expand-lg' id='home'>
       <div className='container d-flex justify-content-between'>
-        <a className='navbar-brand color__yellow'></a>
-        <button
-          className='navbar-toggler'
-          type='button'
-          data-bs-toggle='collapse'
-          data-bs-target='#navbarNav'
-          aria-controls='navbarNav'
-          aria-expanded='false'
-          aria-label='Toggle navigation'
-        >
-          <span className='color__white'>•••</span>
-        </button>
-        <div className='collapse navbar-collapse' id='navbarNav'>
-          <ul className='navbar-nav g-5'>
-            <li className='nav-item'>
-              <a className='nav-link active' aria-current='page'>
-                .skills
-              </a>
+        <div></div>
+        <div className='' id='navbarNav'>
+          <ul className='navbar-nav'>
+            <li className='nav-item' style={{ cursor: 'pointer' }}>
+              <Link to='about' spy={true} offset={-50}>
+                <span className='nav-link'>.about</span>
+              </Link>
             </li>
-            <li className='nav-item'>
-              <a className='nav-link'>.works</a>
+            <li className='nav-item' style={{ cursor: 'pointer' }}>
+              <Link to='works-section' spy={true} offset={-50}>
+                <span className='nav-link'>.works</span>
+              </Link>
             </li>
-            <li className='nav-item'>
-              <a className='nav-link'>.contact</a>
+            <li className='nav-item' style={{ cursor: 'pointer' }}>
+              <Link to='contact' spy={true} offset={-50}>
+                <span className='nav-link'>.contact</span>
+              </Link>
             </li>
           </ul>
         </div>

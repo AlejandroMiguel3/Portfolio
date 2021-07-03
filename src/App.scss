@@ -37,9 +37,11 @@ p {
   margin-top: 0;
   margin-bottom: 0rem;
 }
-a,
-a:hover {
-  color: $yellow;
+a {
+  text-decoration: none;
+  color: $grey;
+  outline: none;
+  transition: 0.2s ease-in;
 }
 .nav-link:hover,
 .nav-link:focus {
@@ -110,7 +112,7 @@ a:hover {
     height: 40vw;
   }
   .tumbnail-top {
-    margin: 5rem 0 3rem;
+    margin: 2rem 0 1.5rem;
   }
   .tumbnail-bottom {
     margin: 3rem 0 0;
@@ -127,6 +129,19 @@ a:hover {
   }
   .klase-top {
     padding-top: 0rem;
+  }
+  .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    grid-gap: 2rem;
+    gap: 2rem;
+    font-size: 1rem;
+  }
+  .mobile-top {
+    margin-top: 2rem;
   }
 }
 
@@ -169,6 +184,9 @@ a:hover {
   .klase-top {
     padding-top: 4rem;
   }
+  .mobile-top {
+    margin-top: 0;
+  }
 }
 
 @media (min-width: 992px) {
@@ -189,6 +207,16 @@ a:hover {
   }
   p,
   .navbar-brand {
+    font-size: 1.5rem;
+  }
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    grid-gap: 8rem;
+    gap: 8rem;
     font-size: 1.5rem;
   }
 }
@@ -264,7 +292,7 @@ a:hover {
   line-height: 3.75rem;
 }
 .wrapper {
-  width: 100vw;
+  width: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -330,7 +358,31 @@ a:hover {
 .container-media {
   position: relative;
 }
-
+.behance:hover {
+  a {
+    color: $blue;
+  }
+  .tag {
+    opacity: 0.5;
+  }
+  .linked {
+    a {
+      opacity: 0.5;
+    }
+  }
+}
+.tag {
+  color: $grey;
+  transition: 0.2s ease-in;
+}
+.linked:hover {
+  a {
+    color: $blue;
+  }
+  .tag {
+    opacity: 0.5;
+  }
+}
 //works
 .project-container {
   position: relative;
@@ -364,11 +416,6 @@ a:hover {
 }
 
 //contact
-a {
-  text-decoration: none;
-  color: $white;
-  outline: none;
-}
 .container-contact {
   position: relative;
 }
@@ -488,25 +535,4 @@ main::before {
   90% {
     transform: translate(-10%, 10%);
   }
-}
-
-//spesific works
-.menu-secondary-bgcolor {
-  &__klase {
-    background-color: $white;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-  }
-}
-.menu-layer {
-  position: relative;
-  background: $yellow;
-  height: 100%;
-  overflow: hidden;
 }
