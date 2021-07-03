@@ -11536,6 +11536,10 @@ a:hover {
   color: #c76d43;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .color__violet {
   color: #995ab8;
 }
@@ -11621,6 +11625,9 @@ a:hover {
   .container-about {
     padding-bottom: 4rem;
   }
+  .klase-top {
+    padding-top: 0rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -11664,6 +11671,9 @@ a:hover {
   }
   .container-about {
     padding-bottom: 8rem;
+  }
+  .klase-top {
+    padding-top: 4rem;
   }
 }
 
@@ -11770,7 +11780,20 @@ a:hover {
           align-items: center;
 }
 
-.wrapper .line {
+.img-wrapper {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+  overflow: hidden;
+}
+
+.wrapper .line,
+.wrapper .enc-title,
+.wrapper .klase-title,
+.wrapper .contact-title,
+.wrapper .skill-title {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -11818,7 +11841,6 @@ a:hover {
 
 .app .scroll {
   padding: 2vh 0;
-  pointer-events: none;
 }
 
 .container-media {
@@ -11875,7 +11897,12 @@ a {
   outline: none;
 }
 
-.menu {
+.container-contact {
+  position: relative;
+}
+
+/* Make sure 3 items are visible in the viewport by setting suitable font size. */
+.marquee {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -11887,29 +11914,11 @@ a {
   --move-initial: calc(-25% + var(--offset));
   --move-final: calc(-50% + var(--offset));
   --item-font-size: 10vw;
-  counter-reset: menu;
-}
-
-.menu__item {
-  cursor: default;
-  position: relative;
-}
-
-.contact-hover {
-  z-index: -9999;
-}
-
-.container-contact {
-  position: relative;
-}
-
-/* Make sure 3 items are visible in the viewport by setting suitable font size. */
-.marquee {
+  counter-reset: 3;
   top: 0;
   left: 0;
   width: var(--marquee-width);
   overflow: hidden;
-  pointer-events: none;
   mix-blend-mode: color-burn;
 }
 
@@ -11928,18 +11937,20 @@ a {
   -webkit-animation-play-state: running;
           animation-play-state: running;
   -webkit-text-stroke: 0.2px #656b75;
-  text-stroke: 0.5px #656b75;
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
   color: transparent;
+  opacity: 0.1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
-.menu:hover .marquee__inner {
-  -webkit-transition: opacity 0.1s;
-  transition: opacity 0.1s;
+.marquee__inner:hover {
+  animation-direction: reverse;
+  color: #656b75;
   -webkit-text-fill-color: #656b75;
   text-fill-color: #656b75;
-  color: #656b75;
+  opacity: 1;
 }
 
 .marquee span {

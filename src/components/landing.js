@@ -5,6 +5,7 @@ import Home from './home'
 
 function Landing() {
   const [loading, setLoading] = useState(false)
+  const [windowHeight, setWindowHeight] = useState(0)
   const size = windowSize()
 
   const app = useRef()
@@ -58,11 +59,13 @@ function Landing() {
     return <Loading></Loading>
   }
   return (
-    <div ref={app} className='app'>
-      <div ref={scrollContainer} className='scroll'>
-        <Home></Home>
+    <>
+      <div ref={app} className='app'>
+        <div ref={scrollContainer} className='scroll'>
+          <Home></Home>
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 export default Landing

@@ -42,7 +42,7 @@ function Loading() {
         <div className='line'>
           <p className='line-paragraph'>
             <span className='color__violet'>const </span>
-            <span className='color__yellow'>dThird </span>
+            <span className='color__yellow'>name </span>
             <span className='color__blue'>&#61; </span>
             <span className='color__green'>'Alejandro Miguel III'</span>
           </p>
@@ -66,6 +66,7 @@ function Loading() {
             <Typewriter
               options={{
                 pauseFor: 2000,
+                autoStart: true,
               }}
               onInit={(typewriter) => {
                 typewriter

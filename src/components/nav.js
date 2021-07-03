@@ -1,8 +1,24 @@
+import { gsap, Power3 } from 'gsap'
+import React, { useEffect } from 'react'
+
 function Navbar() {
+  const headline = gsap.timeline()
+
+  useEffect(() => {
+    headline.from('.navbar', {
+      duration: 1.2,
+      y: -200,
+      ease: Power3.easeOut,
+      delay: 0,
+      stagger: {
+        amount: 0.4,
+      },
+    })
+  }, [])
   return (
     <nav className='navbar navbar-expand-lg'>
       <div className='container d-flex justify-content-between'>
-        <a className='navbar-brand color__yellow'>dThird</a>
+        <a className='navbar-brand color__yellow'></a>
         <button
           className='navbar-toggler'
           type='button'

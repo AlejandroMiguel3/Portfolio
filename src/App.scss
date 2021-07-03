@@ -45,6 +45,9 @@ a:hover {
 .nav-link:focus {
   color: $orange;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 .color {
   &__violet {
     color: $violet;
@@ -122,6 +125,9 @@ a:hover {
   .container-about {
     padding-bottom: 4rem;
   }
+  .klase-top {
+    padding-top: 0rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -159,6 +165,9 @@ a:hover {
   }
   .container-about {
     padding-bottom: 8rem;
+  }
+  .klase-top {
+    padding-top: 4rem;
   }
 }
 
@@ -261,8 +270,18 @@ a:hover {
   justify-content: center;
   align-items: center;
 }
+.img-wrapper {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  overflow: hidden;
+}
 
-.wrapper .line {
+.wrapper .line,
+.wrapper .enc-title,
+.wrapper .klase-title,
+.wrapper .contact-title,
+.wrapper .skill-title {
   width: 100%;
   height: fit-content;
   position: relative;
@@ -302,7 +321,6 @@ a:hover {
   overflow: hidden;
   .scroll {
     padding: 2vh 0;
-    pointer-events: none;
   }
 }
 
@@ -351,7 +369,13 @@ a {
   color: $white;
   outline: none;
 }
-.menu {
+.container-contact {
+  position: relative;
+}
+
+/* Make sure 3 items are visible in the viewport by setting suitable font size. */
+
+.marquee {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -363,28 +387,11 @@ a {
   --move-initial: calc(-25% + var(--offset));
   --move-final: calc(-50% + var(--offset));
   --item-font-size: 10vw;
-  counter-reset: menu;
-}
-
-.menu__item {
-  cursor: default;
-  position: relative;
-}
-.contact-hover {
-  z-index: -9999;
-}
-.container-contact {
-  position: relative;
-}
-
-/* Make sure 3 items are visible in the viewport by setting suitable font size. */
-
-.marquee {
+  counter-reset: 3;
   top: 0;
   left: 0;
   width: var(--marquee-width);
   overflow: hidden;
-  pointer-events: none;
   mix-blend-mode: color-burn;
 }
 
@@ -396,18 +403,19 @@ a {
   animation: marquee 5s linear infinite;
   animation-play-state: running;
   -webkit-text-stroke: 0.2px $grey;
-  text-stroke: 0.5px $grey;
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
   color: transparent;
+  opacity: 0.1;
+  transition: 0.3s;
 }
-.menu:hover {
-  .marquee__inner {
-    transition: opacity 0.1s;
-    -webkit-text-fill-color: $grey;
-    text-fill-color: $grey;
-    color: $grey;
-  }
+
+.marquee__inner:hover {
+  animation-direction: reverse;
+  color: $grey;
+  -webkit-text-fill-color: $grey;
+  text-fill-color: $grey;
+  opacity: 1;
 }
 
 .marquee span {
@@ -425,7 +433,6 @@ a {
 .marquee span {
   font-style: italic;
 }
-
 @keyframes marquee {
   0% {
     transform: translate3d(var(--move-initial), 0, 0);
@@ -481,4 +488,25 @@ main::before {
   90% {
     transform: translate(-10%, 10%);
   }
+}
+
+//spesific works
+.menu-secondary-bgcolor {
+  &__klase {
+    background-color: $white;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+}
+.menu-layer {
+  position: relative;
+  background: $yellow;
+  height: 100%;
+  overflow: hidden;
 }

@@ -1,9 +1,9 @@
-import Navbar from './nav'
 import Headline from './headline'
 import About from './about'
 import Works from './works'
 import Contact from './contact'
 import Media from './media'
+import Navbar from './nav'
 
 function Home() {
   return (
