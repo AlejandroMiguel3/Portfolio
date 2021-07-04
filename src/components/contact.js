@@ -49,6 +49,7 @@ function Contact() {
             </div>
           </div>
         </div>
+        <br />
         <h1 className='color__yellow col-md-1 offset-md-0'> &#125;</h1>
       </section>
       <a

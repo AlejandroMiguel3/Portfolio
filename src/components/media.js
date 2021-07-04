@@ -26,9 +26,8 @@ function Media() {
               </a>
               <span className='tag'>&#42;&#47;</span>
             </span>
-            <br></br>
           </div>
-          <span style={{ cursor: 'pointer' }}>
+          <span className='gotoTop' style={{ cursor: 'pointer' }}>
             <Link to='home' spy={true}>
               <span className='color__blue'>gotoTop</span>
               <span className='color__yellow'>()</span>
