@@ -39,8 +39,8 @@ p {
 }
 a {
   text-decoration: none;
-  color: $grey;
   outline: none;
+  color: $grey;
   transition: 0.2s ease-in;
 }
 .nav-link:hover,
@@ -143,6 +143,20 @@ a {
   .mobile-top {
     margin-top: 2rem;
   }
+  .marquee__inner {
+    width: fit-content;
+    display: flex;
+    position: relative;
+    transform: translate3d(var(--move-initial), 0, 0);
+    animation: marquee 5s linear infinite;
+    animation-play-state: running;
+    -webkit-text-stroke: 0.2px $grey;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    color: $grey;
+    opacity: 1;
+    transition: 0.3s;
+  }
 }
 
 @media (min-width: 768px) {
@@ -186,6 +200,20 @@ a {
   }
   .mobile-top {
     margin-top: 0;
+  }
+  .marquee__inner {
+    width: fit-content;
+    display: flex;
+    position: relative;
+    transform: translate3d(var(--move-initial), 0, 0);
+    animation: marquee 5s linear infinite;
+    animation-play-state: running;
+    -webkit-text-stroke: 0.2px $grey;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    color: transparent;
+    opacity: 0.1;
+    transition: 0.3s;
   }
 }
 
@@ -442,21 +470,6 @@ a {
   mix-blend-mode: color-burn;
 }
 
-.marquee__inner {
-  width: fit-content;
-  display: flex;
-  position: relative;
-  transform: translate3d(var(--move-initial), 0, 0);
-  animation: marquee 5s linear infinite;
-  animation-play-state: running;
-  -webkit-text-stroke: 0.2px $grey;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
-  color: transparent;
-  opacity: 0.1;
-  transition: 0.3s;
-}
-
 .marquee__inner:hover {
   animation-direction: reverse;
   color: $grey;
@@ -534,5 +547,15 @@ main::before {
   }
   90% {
     transform: translate(-10%, 10%);
+  }
+}
+
+//works
+.work-links {
+  color: $white;
+}
+.text:hover {
+  .work-links {
+    color: $red;
   }
 }

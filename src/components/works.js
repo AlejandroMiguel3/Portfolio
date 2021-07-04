@@ -59,12 +59,16 @@ function Works() {
       <br></br>
       <div className='works-container '>
         <div className='row klase-top'>
-          <div className='col order-left wrapper'>
-            <div className='col-md-0 offset-md-3 line'>
+          <div className='col order-left wrapper text'>
+            <a
+              className='col-md-0 offset-md-3 line work-links'
+              href='https://www.klase.cf/'
+              target='_blank'
+            >
               <h1 className='line-paragraph'>
                 <span>klase: </span>
               </h1>
-            </div>
+            </a>
             <div className='col-md-0 offset-md-3 line'>
               <p className='line-paragraph'>
                 <span className='color__grey'>
@@ -74,38 +78,50 @@ function Works() {
             </div>
           </div>
           <div className='project-container col-md-7 offset-md-0'>
-            <div className='klase-tumbnail tumbnail-size tumbnail-top'>
-              &nbsp;
-            </div>
+            <a href='https://www.klase.cf/' target='_blank'>
+              <div className='klase-tumbnail tumbnail-size tumbnail-top'>
+                &nbsp;
+              </div>
+            </a>
           </div>
         </div>
         <div className='row enc-container'>
           <div className='project-container col-md-7 offset-md-0'>
-            <div className='encryptee-tumbnail tumbnail-size'>&nbsp;</div>
+            <a href='https://encryptee.ga/public/' target='_blank'>
+              <div className='encryptee-tumbnail tumbnail-size'>&nbsp;</div>
+            </a>
           </div>
-          <div className='col wrapper'>
-            <div className='col-md-0 offset-md-2 enc-title'>
+          <div className='col wrapper text'>
+            <a
+              className='col-md-0 offset-md-2 enc-title work-links'
+              href='https://encryptee.ga/public/'
+              target='_blank'
+            >
               <br></br>
               <h1 className='line-paragraph enc-desc'>
                 <span>encryptee: </span>
               </h1>
-            </div>
+            </a>
             <div className='col-md-0 offset-md-2 enc-title'>
               <p className='line-paragraph enc-desc'>
                 <span className='color__grey'>
-                  &#47;&#42; e-commerse web application &#42;&#47;
+                  &#47;&#42; e-commerce web application &#42;&#47;
                 </span>
               </p>
             </div>
           </div>
         </div>
         <div className='row tumbnail-bottom klase-container'>
-          <div className='col order-left wrapper mobile-top'>
-            <div className='col-md-0 offset-md-2 klase-title'>
+          <div className='col order-left wrapper mobile-top text'>
+            <a
+              className='col-md-0 offset-md-2 klase-title work-links'
+              href='https://anydo.ml/'
+              target='_blank'
+            >
               <h1 className='klase-desc'>
                 <span>anydo: </span>
               </h1>
-            </div>
+            </a>
             <div className='col-md-0 offset-md-2 klase-title'>
               <p className='klase-desc'>
                 <span className='color__grey'>
@@ -115,7 +131,9 @@ function Works() {
             </div>
           </div>
           <div className='project-container col-md-7 offset-md-0'>
-            <div className='anydo-tumbnail tumbnail-size'>&nbsp;</div>
+            <a href='https://anydo.ml/' target='_blank'>
+              <div className='anydo-tumbnail tumbnail-size'>&nbsp;</div>
+            </a>
           </div>
         </div>
       </div>

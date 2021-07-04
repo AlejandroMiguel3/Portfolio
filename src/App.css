@@ -11528,8 +11528,8 @@ p {
 
 a {
   text-decoration: none;
-  color: #656b75;
   outline: none;
+  color: #656b75;
   -webkit-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
 }
@@ -11649,6 +11649,28 @@ a {
   .mobile-top {
     margin-top: 2rem;
   }
+  .marquee__inner {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-transform: translate3d(var(--move-initial), 0, 0);
+            transform: translate3d(var(--move-initial), 0, 0);
+    -webkit-animation: marquee 5s linear infinite;
+            animation: marquee 5s linear infinite;
+    -webkit-animation-play-state: running;
+            animation-play-state: running;
+    -webkit-text-stroke: 0.2px #656b75;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    color: #656b75;
+    opacity: 1;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
 }
 
 @media (min-width: 768px) {
@@ -11698,6 +11720,28 @@ a {
   }
   .mobile-top {
     margin-top: 0;
+  }
+  .marquee__inner {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-transform: translate3d(var(--move-initial), 0, 0);
+            transform: translate3d(var(--move-initial), 0, 0);
+    -webkit-animation: marquee 5s linear infinite;
+            animation: marquee 5s linear infinite;
+    -webkit-animation-play-state: running;
+            animation-play-state: running;
+    -webkit-text-stroke: 0.2px #656b75;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    color: transparent;
+    opacity: 0.1;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
   }
 }
 
@@ -11983,29 +12027,6 @@ a {
   mix-blend-mode: color-burn;
 }
 
-.marquee__inner {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  -webkit-transform: translate3d(var(--move-initial), 0, 0);
-          transform: translate3d(var(--move-initial), 0, 0);
-  -webkit-animation: marquee 5s linear infinite;
-          animation: marquee 5s linear infinite;
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
-  -webkit-text-stroke: 0.2px #656b75;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
-  color: transparent;
-  opacity: 0.1;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
 .marquee__inner:hover {
   animation-direction: reverse;
   color: #656b75;
@@ -12151,5 +12172,13 @@ main::before {
     -webkit-transform: translate(-10%, 10%);
             transform: translate(-10%, 10%);
   }
+}
+
+.work-links {
+  color: #e5e5e5;
+}
+
+.text:hover .work-links {
+  color: #ec5252;
 }
 /*# sourceMappingURL=App.css.map */

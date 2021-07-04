@@ -35,12 +35,12 @@ function About() {
           <br></br>
           <p>
             I’m a Front-End Developer located in Taguig, Philippines. I have a
-            serious passion on frontend staff like UI, animations, and dynamic
-            user experiences.
+            serious passion on frontend developement like UI, animations, and
+            dynamic user experiences.
           </p>
           <br></br>
           <p>
-            Creative visionary, problem solver, committed to self-development.
+            Creative, visionary, problem solver, committed to self-development.
             Fan of anime, volleyball, TV series, Music and Movies.
           </p>
           <br></br>
