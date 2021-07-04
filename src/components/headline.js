@@ -15,7 +15,7 @@ function Headline() {
         amount: 0.4,
       },
     })
-  })
+  }, [])
 
   return (
     <section>

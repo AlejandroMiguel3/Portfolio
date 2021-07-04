@@ -48,7 +48,7 @@ function Works() {
         amount: 0.2,
       },
     })
-  })
+  }, [])
 
   return (
     <section className='container container-works' id='works-section'>

@@ -31,7 +31,7 @@ function Loading() {
         },
       })
     }, 6800)
-  })
+  }, [])
 
   return (
     <section
